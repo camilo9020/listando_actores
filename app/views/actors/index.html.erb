@@ -3,26 +3,26 @@
 	<div class="row">
 		<div class="table responsive">
 		
-		<table class="table">
+		<table class="table table-striped table-bordered table-hover table-condensed center-text" width="200">
 			<thead>
-				<tr>
-					<th class="text-center">Foto</th>
-					<th class="text-center">Nombre</th>
-					<th class="text-center">Bio</th>
-					<th class="text-center">Fecha de Nacimiento</th>
-					<th class="text-center">Lugar de Nacimiento</th>
-					<th class="text-center">Fecha y Lugar de Fallecimieno</th>
+				<tr class="success">
+					<th class="">Foto</th>
+					<th class="">Nombre</th>
+					<th class="">Bio</th>
+					<th class="">Fecha de Nacimiento</th>
+					<th class="">Lugar de Nacimiento</th>
+					<th class="">Fecha y Lugar de Fallecimieno</th>
 				</tr>	
 			</thead>
 			<tbody>
 				<% @actors.each do |actor| %>
 				<tr>
-					<td class="text-center"><img src="<%= actor.image_url %>" width="100" height="100"></td>
-					<td class="text-center"><%= actor.name %></td>
-					<td class="text-center"><%= actor.bio %></td>
-					<td class="text-center"><%= actor.birth_date%></td>
-					<td class="text-center"><%= actor.birth_place%></td>
-					<td class="text-center">
+					<td class=""><img src="<%= actor.image_url %>" width="100" height="100"></td>
+					<td class=""><%= actor.name %></td>
+					<td class=""><%= actor.bio %></td>
+					<td class=""><%= actor.birth_date%></td>
+					<td class=""><%= actor.birth_place%></td>
+					<td class="">
 						<span><%= actor.alive == true  ? 'Esta vivo' :  actor.death_date %></span>	
 						<span><%= actor.alive == true  ? '' :  actor.death_place %></span>	
 					</td>
