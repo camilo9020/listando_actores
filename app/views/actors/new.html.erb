@@ -1,0 +1,66 @@
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-sm-offset-3 ">
+			<h2 class="text-center">Agregar un nuevo actor</h2>
+			<%= form_for @actor do |a| %> 
+				<div class="form-group">
+					<%= a.text_field :name, class: "form-control", placeholder: 'Nombre del actor' %>
+				</div>
+
+				
+				 <div class="form-group">
+					<div class="form-inline">
+					    <label for="">Fecha de Nacimiento:</label>
+						<%= a.date_field :birth_date, class: "form-control", placeholder: 'Fecha de nacimiento' %>
+					</div>
+				</div>
+
+				<div class="form-group"><%= a.text_field :birth_place, class: "form-control", placeholder: 'Lugar de nacimiento' %>
+				</div>
+
+				<div class="form-group">
+					<span><%= a.text_area :bio, class: "form-control", placeholder: 'Corta Biografia del actor' %></span>
+				</div>
+
+				<div class="form-group">
+					<%= a.url_field :image_url, class: "form-control", placeholder: 'url de una foto del actor' %>
+				</div>
+				<div class="form-group">
+				
+					<div class="form-inline ">
+						<div class="form-group">
+							<label for="">¿El actor ya Falleció?</label>
+						</div>
+						<div class="form-group">
+							<%= a.check_box :alive, class: 'form-control' %>
+						</div>
+
+
+						<div class="form-group">
+							<label for="">Fecha de Fallecimiento:</label>
+						</div>
+
+						<div class="form-group">			
+							<span><%= a.date_field :death_date, class: "form-control", placeholder: 'Fecha de Fallecimiento' %>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">			
+					<span><%= a.text_field :death_place, class: "form-control", placeholder: 'Lugar de Fallecimiento' %>
+					</span>
+				</div>
+
+				<div class="form-group">
+					<span><%= a.submit class: "btn btn-primary" %></span>
+ 				</div>
+
+			<% end %>
+
+		</div>
+
+
+	</div>
+</div>

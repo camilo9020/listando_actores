@@ -9,7 +9,6 @@ class CreateActors < ActiveRecord::Migration
       t.boolean :alive
       t.date :death_date
       t.string :death_place, limit: 100
-
       t.timestamps null: false
     end
   end
