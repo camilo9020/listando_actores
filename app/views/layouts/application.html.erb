@@ -5,20 +5,19 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
 <style>
-	td, th {	
-			display: table-cell;
-			vertical-align: middle;
-			text-align:center
-			 }
-
-	table {width="200"}		 
-
+	th, td {text-align: center;}
 </style>
 
 </head>
 
 <body>
+
+<% if flash[:notice]-%>
+   <div class="alert alert-info text-center" role="alert"><%= flash[:notice] %></div>
+<% end -%>
+
 
 <%= yield %>
 
